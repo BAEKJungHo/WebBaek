@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Sample Example&lt;DeJa&gt;</title>
+
+  <style>
+    body {
+      background-color: linen;
+      color: green;
+      margin-left: 40px;
+      marginright: 40px;
+    }
+
+    h3 {
+      text-align: center;
+      color: darkred;
+    }
+
+    hr {
+      height: 5px;
+      border: solid grey;
+      background-color: grey
+    }
+
+    span {
+      color: blue;
+      font-size: 20px;
+    }
+  </style>
+
+  <script>
+    function show() {
+      // 본인사진 출력(백정호)
+      document.getElementById("fig").src ="BAEKJungHo.jpeg";
+    }
+    function hide() {
+      document.getElementById("fig").src ="";
+    }
+  </script>
+
+</head>
+
+<body>
+  <h3> Elvis Presley</h3>
+  <hr>
+   <!-- onmouseover="show()" onmouseout="hide()" 이 부분을 <span #> #위치에 지정 -->
+  He was an American singer and actor. In november 1956, he mad his film debut
+  in <span onmouseover="show()" onmouseout="hide()"> Love Me Tender </span>.
+  He is often reffered to as "<span>the King of Rock and Roll</span>".
+  <div><img id="fig" src=""></div>
+
+</body>
+
+</html>
