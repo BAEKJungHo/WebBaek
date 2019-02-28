@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>while문</title>
+  <script>
+  /* while문
+  while(i<=n) {
+    sum += i;
+    i++;
+  } */
+  </script>
+</head>
+<body>
+  <h3>음의정수의 합 구하기</h3>
+  <hr>
+  <script>
+    var num = parseInt(prompt("0보다 작은 정수를 입력하세요", 0));
+    var i, sum=0;
+
+    for(i=num; i<0; i++) {
+      sum += i;
+    }
+    document.write("음의정수의 합은" + sum);
+  </script>
+</body>
+</html>

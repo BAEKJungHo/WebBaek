@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>문제 5번</title>
+</head>
+<body>
+  <h3>암호를 입력하라!!</h3>
+  <hr>
+  <script>
+    var password = prompt("암호를 대라", "백정호");
+    var pass = "백정호";
+    while(1){
+      if(password == pass) {
+        document.write("통과!");
+        break;
+      }
+      else
+        password = prompt("암호를 대라", "백정호");
+    }
+  </script>
+</body>
+</html>

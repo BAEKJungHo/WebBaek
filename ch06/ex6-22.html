@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>함수</title>
+  <script>
+    function sum(init, final, inc){
+      var total = 0;
+      for(var i=init; i<=final; i+=inc)
+        total += i;
+      return total;
+    }
+  </script>
+</head>
+<body>
+  <h3>함수 adder()</h3>
+  <hr>
+  <script>
+    sum0 = sum(1, 100, 1);
+    sum1 = sum(1, 100, 2);
+    sum2 = sum(2, 100, 2);
+    sum3 = sum(3, 100, 3);
+    sum4 = sum(4, 100, 4);
+    sum5 = sum(5, 100, 5);
+
+    document.write("1~100까지의 합 : " + sum0 + "<br>");
+    document.write("1~100까지의 홀수 합 : " + sum1 + "<br>");
+    document.write("1~100까지의 짝수 합 : " + sum2 + "<br>");
+    document.write("3의 배수의 합 : " + sum3 + "<br>");
+    document.write("4의 배수의 합 : " + sum4 + "<br>");
+    document.write("5의 배수의 합 : " + sum5);
+  </script>
+</body>
+</html>
