@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>프로그램 수행 시간</title>
+</head>
+<body>
+  <script>
+    var sum = 0;
+    var start = new Date();
+    for(i=1; i<10000; i++){
+      sum += i;
+    }
+    var end = new Date();
+
+    var elapsedTime = end.getTime() - start.getTime();
+    document.write("경과 시간" + elapsedTime + "밀리초");
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>문제 6번</title>
+  <script>
+    function userInput() {
+      var str = prompt("문자열 입력");
+      var names = str.split("&");
+
+      for(i=0; i<names.length; i++)
+        document.write(names[i] + "<br>");
+    }
+  </script>
+</head>
+<body>
+  <h3>문자열 분리</h3>
+  <hr>
+  <script>
+    userInput();
+  </script>
+</body>
+</html>

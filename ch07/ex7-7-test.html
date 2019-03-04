@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>사용자가 입력한 것을 출력</title>
+  <script>
+    /* 버블정렬 이용 */
+    /* index.sort(); 이용하면 편리 */
+    function userInput() {
+      var str = prompt("문자열을 ','로 분리하여 입력하세요");
+      document.write(str);
+
+      var names = str.split(",");
+      var temp;
+      document.write("<br><hr>");
+
+      for(i=0; i<names.length-1; i++){
+        for(k=0; k<names.length-1-i; k++){
+          if(names[k] > names[k+1]){
+            temp = names[k];
+            names[k] = names[k+1];
+            names[k+1] = temp;
+          }
+        }
+      }
+
+      /* 중복 제거 */
+      for(m=0; m<names.length; m++){
+        for(p=0; p<names.length-1; p++){
+          if(names[p] == names[p+1]) {
+            document.write("<br><br>중복된 이름 : " + names[p] +"<br><hr>");
+            names.splice(p+1, 1);
+          }
+        }
+      }
+
+      document.write("정렬 후 : ");
+      for(n=0; n<names.length; n++){
+        document.write(names[n]+"&nbsp");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>사용자가 입력한 문자열을 출력</h3>
+  <hr>
+  <script>
+    userInput();
+  </script>
+</body>
+</html>
