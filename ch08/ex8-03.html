@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>innerHTML 활용</title>
+  <script>
+    function change() {
+      var p = document.getElementById("firstP");
+      p.innerHTML = "나의 <img src='media/puppy.png'>강아지";
+    }
+    function change1() {
+      var p = document.getElementById("secondP");
+      p.innerHTML = "나의 <img src='media/puppy.png'>강아지";
+    }
+    function change2() {
+      var p = document.getElementById("thirdP");
+      p.innerHTML = "나의 <img src='media/puppy.png'>강아지";
+    }
+  </script>
+</head>
+<body>
+  <h3>innerHTML 활용</h3>
+  <hr>
+  <p id="firstP" style="color:blue" onclick="change()">여기에<span style="color:red">클릭하세요</span></p><br><hr>
+  <p id="secondP" style="color:blue" onmouseover="change1()">마우스<span style="color:red">오버</span></p><br><hr>
+  <p id="thirdP" style="color:blue" onmousemove="change2()">마우스<span style="color:red">무브</span></p>
+
+</body>
+</html>
