@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>setInterval()</title>
+</head>
+<body>
+  <h3>텍스트가 자동 회면하며, 마우스 클릭시 중단</h3>
+  <hr>
+  <div><span id="span" style="background-color : yellow">
+    자동 회전하는 텍스트</span>
+  </div>
+  <script>
+    var span = document.getElementById("span");
+    var timerID = setInterval("doRotate('right')", 200);
+
+    span.onclick = function(e){
+      clearInterval(timerID);
+    }
+
+    function doRotate(direction) {
+      var str = span.innerHTML;
+      if(direction == "left"){
+        var fisrtChar = str.substr(0, 1);
+        var remains = str.substr(1, str.length-1);
+        str = remains + fisrtChar;
+      }
+      else {
+        var lastChar = str.substr(str.length-1, str.length);
+        var remains = str.substr(0, str.length-1);
+        str = lastChar + remains;
+      }
+      span.innerHTML = str;
+    }
+  </script>
+</body>
+</html>
