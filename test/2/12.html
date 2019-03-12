@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>백정호_12번</title>
+  <script>
+    function changeSports() {
+      var gubun = document.getElementById("sports").options[document.getElementById("sports").selectedIndex].value;
+      var img = "";
+      if (gubun != "X") {
+        img += "<img src='media/"+gubun+".PNG' style='width: 300px; height: 300px;'>";
+        document.getElementById("img_out").innerHTML = img;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h3>문제 12번</h3>
+  <hr>
+  <form name=f1 style=margin:0; onsubmit="return false;">
+    <select name="sports" id="sports" onchange="changeSports();">
+      <option value="X">종목선택</option>
+      <option value="soccer">축구</option>
+      <option value="basketball">농구</option>
+      <option value="baseball">야구</option>
+    </select>
+    <p id="img_out"></p>
+  </form>
+</body>
+</html>
